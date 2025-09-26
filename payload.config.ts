@@ -3,13 +3,15 @@ import { s3Storage } from "@payloadcms/storage-s3";
 import sharp from "sharp";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { buildConfig } from "payload";
+import { Siswa } from "./src/collections/siswa";
+import { GambarSiswa } from "./src/collections/gambar-siswa";
 
 export default buildConfig({
   // If you'd like to use Rich Text, pass your editor here
   editor: lexicalEditor(),
 
   // Define and configure your collections in this array
-  collections: [],
+  collections: [Siswa, GambarSiswa],
 
   // Payload Secret
   secret: process.env.PAYLOAD_SECRET || "",
