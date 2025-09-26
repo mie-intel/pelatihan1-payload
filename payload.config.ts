@@ -29,8 +29,8 @@ export default buildConfig({
     // Untuk koneksi ke Amazon S3
     s3Storage({
       collections: {
-        media: {
-          prefix: "custom-prefix",
+        "gambar-siswa": {
+          prefix: "gambar",
           signedDownloads: {
             shouldUseSignedURL: ({ collection, filename, req }) => {
               return filename.endsWith(".mp4");
